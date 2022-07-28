@@ -1,0 +1,6 @@
+[submodule "ServerPy"]
+	path = PulsePy/ServerPy
+	url = http://gitea.qmpl.xyz/ThibaultCapelle/ServerPy.git
+[submodule "pyrpl"]
+	path = PulsePy/pyrpl
+	url = https://github.com/lneuhaus/pyrpl.git
