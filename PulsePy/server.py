@@ -47,13 +47,22 @@ class Client(Generic_Client):
         self.write_reg(0x40200000, 0x240, val=FPGA_val)
         
     @property
-    def TTL_frequency(self):
+    def TTL_frequency(self):#Pin N2
         return 125e6/9/self.write_reg(0x40200000, 0x248)
     
     @TTL_frequency.setter
     def TTL_frequency(self, val):
         FPGA_val=int(125e6/9/val)
         self.write_reg(0x40200000, 0x248, val=FPGA_val)
+    
+    @property
+    def TTL2_frequency(self):#Pin N3
+        return 125e6/9/self.write_reg(0x40200000, 0x258)
+    
+    @TTL_frequency.setter
+    def TTL2_frequency(self, val):
+        FPGA_val=int(125e6/9/val)
+        self.write_reg(0x40200000, 0x258, val=FPGA_val)
     
     @property
     def VIn0(self):
